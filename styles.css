@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #333;
+  --gradient: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  --primary-contrast: #fcfcfc;
+  --font-1: 'Inconsolata', sans-serif;
+  --font-2: 'Open Sans Condensed', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--font-1);
+  font-size: 1.6rem;
+}
+
+.container {
+  padding: 0 3rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.main {
+  padding-bottom: 10rem;
+}
+
+.header {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.brief {
+  margin-top: 1rem;
+
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: var(--font-2);
+}
+
+.points {
+  margin: 4rem 0;
+  text-align: center;
+  color: var(--primary);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.gallery-item {
+  display: flex;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.amazing-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-contrast);
+  background: var(--gradient);
+  border: .1rem solid var(--primary);
+  cursor: pointer;
+}
+
+.amazing-button:active {
+  box-shadow: inset 0 0 1rem var(--primary);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+}
+
+.footer > a {
+  text-decoration: none;
+  font-weight: bold;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer > a:hover {
+  border-bottom: .2rem solid var(--primary-contrast);
+}
+
+.allen-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8rem;
+  height: 8rem;
+  font-size: 4.2rem;
+  cursor: pointer;
+}
+
+.allen-head.hazard {
+  animation-name: hazard;
+  animation-duration: 0.25s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.allen-head:hover {
+  border: .3rem solid var(--primary);
+}
+
+.allen-head > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 9999;
+}
+
+@keyframes hazard {
+  from {
+   opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
